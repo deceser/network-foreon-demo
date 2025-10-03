@@ -1,0 +1,11 @@
+node_modules
+dist
+tsconfig.tsbuildinfo
+.env
+.env-*
+!.env*.template
+!.env*.example
+.turbo
+# Ignoring ./dev allows Developers to create a cusrtom ./dev script, based on ./dev.sh, and make sure that this personal script will not go to the repo.
+./dev
+tmp

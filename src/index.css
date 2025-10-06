@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #22005D;
+  border-radius: 10px;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22005d;
+  border-radius: 10px;
+}
+
+@media (max-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1600px) {
+  html {
+    font-size: 12.8px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  .Toastify__toast-container {
+    width: 100%!important;
+}
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --black: 0 0 0; /* hsl(0 0 0) */
+    --white: 0 0 100; /* hsl(0 0 100) */
+    --white02: 300 100% 99.22%; /* hsl(300, 100%, 99.22%) */
+
+    /* Primary */
+    --primary10: 261.94 100% 18.24%; /* hsl(261.94, 100%, 18.24%) */
+    --primary20: 258.57 58.33% 28.24%; /* hsl(258.57, 58.33%, 28.24%)*/
+    --primary30: 257.35 43.01% 37.84%; /* hsl(257.35, 43.01%, 37.84%)*/
+    --primary40: 256.43 34.43% 47.84%; /* hsl(256.43, 34.43%, 47.84%)*/
+    --primary50: 256.05 40.19% 58.04%; /* hsl(256.05, 40.19%, 58.04%)*/
+    --primary60: 255.68 55% 68.63%; /* hsl(255.68, 55%, 68.63%)  */
+    --primary70: 256.48 86.67% 79.41%; /* hsl(256.48, 86.67%, 79.41%)*/
+    --primary80: 257.01 100% 86.86%; /* hsl(257.01, 100%, 86.86%) */
+    --primary90: 261.18 100% 93.33%; /* hsl(261.18, 100%, 93.33%) */
+    --primary95: 268.24 100% 96.67%; /* hsl(268.24, 100%, 96.67%)*/
+
+    /* Secondary */
+    --secondary10: 251.07 100% 20.2%; /* hsl(251.07, 100%, 20.2%)  */
+    --secondary20: 253.33 100% 31.76%; /* hsl(253.33, 100%, 31.76%) */
+    --secondary30: 254.05 98.23% 44.31%; /* hsl(254.05, 98.23%, 44.31%)*/
+    --secondary40: 247.89 91.35% 59.22%; /* hsl(247.89, 91.35%, 59.22%)*/
+    --secondary50: 245.22 100% 68.43%; /* hsl(245.22, 100%, 68.43%) */
+    --secondary60: 244.25 100% 75.1%; /* hsl(244.25, 100%, 75.1%)  */
+    --secondary70: 243.83 100% 81.57%; /* hsl(243.83, 100%, 81.57%) */
+    --secondary80: 244.76 100% 87.65%; /* hsl(244.76, 100%, 87.65%) */
+    --secondary90: 247.5 100% 93.73%; /* hsl(247.5, 100%, 93.73%)  */
+    --secondary95: 257.65 100% 96.67%; /* hsl(257.65, 100%, 96.67%)*/
+
+    /* Tertiary */
+    --tertiary10: 288.92 100% 12.75%; /* hsl(288.92, 100%, 12.75%) */
+    --tertiary20: 289.62 100% 20.39%; /* hsl(289.62, 100%, 20.39%) */
+    --tertiary30: 290.14 100% 28.63%; /* hsl(290.14, 100%, 28.63%) */
+    --tertiary40: 290.16 97.93% 37.84%; /* hsl(290.16, 97.93%, 37.84%)*/
+    --tertiary50: 289.45 69.04% 53.14%; /* hsl(289.45, 69.04%, 53.14%)*/
+    --tertiary60: 289.69 91.06% 64.9%; /* hsl(289.69, 91.06%, 64.9%)*/
+    --tertiary70: 90.95 100% 75.29%; /* hsl(290.95, 100%, 75.29%) */
+    --tertiary80: 293.41 100% 83.92%; /* hsl(293.41, 100%, 83.92%) */
+    --tertiary90: 298.54 100% 91.96%; /* hsl(298.54, 100%, 91.96%) */
+    --tertiary95: 309 100% 96.08%; /* hsl(309, 100%, 96.08%)  */
+
+    /* Error */
+    --error10: 358.15 100% 12.75%; /* hsl(358.15, 100%, 12.75%) */
+    --error20: 357.14 100% 20.59%; /* hsl(357.14, 100%, 20.59%) */
+    --error30: 355.92 100% 28.82%; /* hsl(355.92, 100%, 28.82%) */
+    --error40: 0 75.47% 41.57%; /* hsl(0, 75.47%, 41.57%)    */
+    --error50: 2.41 72.5% 52.94%; /* hsl(2.41, 72.5%, 52.94%)  */
+    --error60: 3.63 100% 64.31%; /* hsl(3.63, 100%, 64.31%)   */
+    --error70: 5.54 100% 74.51%; /* hsl(5.54, 100%, 74.51%)   */
+    --error80: 6.43 100% 83.53%; /* hsl(6.43, 100%, 83.53%)   */
+    --error90: 5.85 100% 91.96%; /* hsl(5.85, 100%, 91.96%)   */
+    --error95: 8.57 100% 95.88%; /* hsl(8.57, 100%, 95.88%)  */
+
+    /* Neutral */
+    --neutral10: 260 5.26% 11.18%; /* hsl(260, 5.26%, 11.18%)   */
+    --neutral20: 260 3.03% 19.41%; /* hsl(260, 3.03%, 19.41%)   */
+    --neutral30: 270 2.78% 28.24%; /* hsl(270, 2.78%, 28.24%)   */
+    --neutral40: 276 2.62% 37.45%; /* hsl(276, 2.62%, 37.45%)   */
+    --neutral50: 285 1.67% 47.06%; /* hsl(285, 1.67%, 47.06%)   */
+    --neutral60: 288 2.28% 57.06%; /* hsl(288, 2.28%, 57.06%)   */
+    --neutral70: 300 2.41% 67.45%; /* hsl(300, 2.41%, 67.45%)   */
+    --neutral80: 300 4.5% 78.24%; /* hsl(300, 4.5%, 78.24%)    */
+    --neutral90: 300 9.09% 89.22%; /* hsl(300, 9.09%, 89.22%)   */
+    --neutral95: 300 18.52% 94.71%; /* hsl(300, 18.52%, 94.71%) */
+
+    /* Neutral-variant */
+    --neutral-variant10: 262.5 13.33% 11.76%; /* hsl(262.5, 13.33%, 11.76%)*/
+    --neutral-variant20: 260 8.74% 20.2%; /* hsl(260, 8.74%, 20.2%)    */
+    --neutral-variant30: 266.67 6.12% 28.82%; /* hsl(266.67, 6.12%, 28.82%)*/
+    --neutral-variant40: 266.67 4.62% 38.24%; /* hsl(266.67, 4.62%, 38.24%)*/
+    --neutral-variant50: 270 4.1% 47.84%; /* hsl(270, 4.1%, 47.84%)    */
+    --neutral-variant60: 270 4.67% 58.04%; /* hsl(270, 4.67%, 58.04%)   */
+    --neutral-variant70: 272.73 6.83% 68.43%; /* hsl(272.73, 6.83%, 68.43%)*/
+    --neutral-variant80: 272.73 10.28% 79.02%; /* hsl(272.73, 10.28%, 79.02%)*/
+    --neutral-variant90: 278.18 21.57% 90%; /* hsl(278.18, 21.57%, 90%)  */
+    --neutral-variant95: 275 54.55% 95.69%; /* hsl(275, 54.55%, 95.69%) */
+
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+
+    --accent: #f5f5f5;
+    --accent-foreground: #171717;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --warning: #f59f0a;
+    --warning-foreground: #fef3c8;
+
+    --success: 120 100% 25%;
+    --success-foreground: 0 0% 98%;
+
+    --info: #2757b0;
+    --info-foreground: #f7f7f8;
+
+    /* Gradient colors */
+    --bg-button-from: #00a9b7;
+    --bg-button-via: #4c32f2;
+    --bg-button-to: #9f00be;
+
+    --bg-checkbox: #5856d6;
+    --shadow-select: rgba(5, 5, 5, 0.15);
+    --text-select: #55617e;
+    --gray-4: #605d62;
+    --green-1: #69a969;
+    --green-2: #5ae02f;
+    --red-1: #e86969;
+
+    --chart-1: 0 100% 56%;
+    --chart-2: 248 91% 59%;
+
+    --radius: 0.5rem;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0a0a0a;
+
+    --popover: #fff;
+    --popover-foreground: #000;
+
+    /* Dark mode variables */
+    --dark-background: 222.2 84% 4.9%;
+    --dark-foreground: 210 40% 98%;
+    --dark-primary: 217.2 91.2% 59.8%;
+    --dark-secondary: 217.2 32.6% 17.5%;
+  }
+
+  .dark {
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
+    
+    /* Override primary colors for dark mode */
+    --primary10: var(--dark-primary);
+    --primary20: var(--dark-secondary);
+    
+    /* Add more dark mode color overrides as needed */
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.xAxis text {
+  fill: 000 !important;
+}
+
+/* Add dark mode specific styles */
+.dark {
+  color-scheme: dark;
+  --background: var(--dark-background);
+  --foreground: var(--dark-foreground);
+}
